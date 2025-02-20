@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Pull Request e GitHub Actions</title>
+    <link rel="stylesheet" href="files/css/style.css">
+</head>
+
+<body>
+    <div id="banner">
+        <img src="files/imgs/postali.jpg" alt="Banner do Blog">
+    </div>
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'commits')">Commits Padrão</button>
+        <button class="tab" onclick="openTab(event, 'descricao')">Descrição de Commits</button>
+        <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
+    </div>
+
+    <div id="commits" class="content active-content">
+        <h2>Commits Padrão</h2>
+        <p>Utilize este padrão de commits para manter um histórico organizado e fácil de entender.</p>
+
+        <h3>📌 Como Utilizar</h3>
+        <p>Cada commit para a main deve seguir este formato:</p>
+        <code>git commit -m ":emoji: tipo: | Descrição do que foi feito"</code>
+
+        <h3>🛠️ Exemplos Práticos</h3>
+        <ul>
+            <li><code>git commit -m ":bug: fix: | Corrigido erro no login ao enviar formulário vazio"</code></li>
+            <li><code>git commit -m ":zap: perf: | Melhorado tempo de carregamento da página inicial"</code></li>
+            <li><code>git commit -m ":sparkles: feat: | Criado sistema de upload de imagens"</code></li>
+            <li><code>git commit -m ":books: docs: | Adicionado guia de instalação ao README"</code></li>
+            <li><code>git commit -m ":recycle: refactor: | Melhorada organização das funções no controller"</code></li>
+        </ul>
+
+        <h3>📋 Padrões de Commits</h3>
+        <table>
+            <tr>
+                <th>Tipo do Commit</th>
+                <th>Emoji</th>
+                <th>Palavra-chave</th>
+            </tr>
+            <tr>
+                <td>Acessibilidade</td>
+                <td>♿</td>
+                <td>wheelchair</td>
+            </tr>
+            <tr>
+                <td>Adicionando um teste</td>
+                <td>✅</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>Adicionando uma dependência</td>
+                <td>➕</td>
+                <td>build</td>
+            </tr>
+            <tr>
+                <td>Alterações de revisão de código</td>
+                <td>👌</td>
+                <td>style</td>
+            </tr>
+            <tr>
+                <td>Animações e transições</td>
+                <td>💫</td>
+                <td>style</td>
+            </tr>
+            <tr>
+                <td>Bugfix</td>
+                <td>🐛</td>
+                <td>fix</td>
+            </tr>
+            <tr>
+                <td>Comentários</td>
+                <td>💡</td>
+                <td>docs</td>
+            </tr>
+            <tr>
+                <td>Commit inicial</td>
+                <td>🎉</td>
+                <td>init</td>
+            </tr>
+            <tr>
+                <td>Configuração</td>
+                <td>🔧</td>
+                <td>chore</td>
+            </tr>
+            <tr>
+                <td>Deploy</td>
+                <td>🚀</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Documentação</td>
+                <td>📚</td>
+                <td>docs</td>
+            </tr>
+            <tr>
+                <td>Em progresso</td>
+                <td>🚧</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Estilização de interface</td>
+                <td>💄</td>
+                <td>feat</td>
+            </tr>
+            <tr>
+                <td>Infraestrutura</td>
+                <td>🧱</td>
+                <td>ci</td>
+            </tr>
+            <tr>
+                <td>Lista de ideias (tasks)</td>
+                <td>🔜</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Mover/Renomear</td>
+                <td>🚚</td>
+                <td>chore</td>
+            </tr>
+            <tr>
+                <td>Novo recurso</td>
+                <td>✨</td>
+                <td>feat</td>
+            </tr>
+            <tr>
+                <td>Package.json em JS</td>
+                <td>📦</td>
+                <td>build</td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td>⚡</td>
+                <td>perf</td>
+            </tr>
+            <tr>
+                <td>Refatoração</td>
+                <td>♻️</td>
+                <td>refactor</td>
+            </tr>
+            <tr>
+                <td>Removendo um arquivo</td>
+                <td>🔥</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Removendo uma dependência</td>
+                <td>➖</td>
+                <td>build</td>
+            </tr>
+            <tr>
+                <td>Responsividade</td>
+                <td>📱</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Revertendo mudanças</td>
+                <td>💥</td>
+                <td>fix</td>
+            </tr>
+            <tr>
+                <td>Segurança</td>
+                <td>🔒️</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>🔍️</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tag de versão</td>
+                <td>🔖</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Teste de aprovação</td>
+                <td>✔️</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>Testes</td>
+                <td>🧪</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>Texto</td>
+                <td>📝</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tipagem</td>
+                <td>🏷️</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tratamento de erros</td>
+                <td>🥅</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Dados</td>
+                <td>🗃️</td>
+                <td>raw</td>
+            </tr>
+        </table>
+
+        <h3>🎯 Dicas para um Commit Perfeito</h3>
+        <ul>
+            <li>✅ Use mensagens curtas e diretas.</li>
+            <li>✅ Siga sempre o formato <code>:emoji: tipo: | descrição</code>.</li>
+            <li>✅ Faça commits atômicos (uma alteração por commit).</li>
+            <li>✅ Inclua referências a issues quando aplicável.</li>
+        </ul>
+    </div>
+
+    <div id="descricao" class="content">
+        <h2>Guia para Descrição de Pull Requests</h2>
+
+        <h3>📌 1. Título</h3>
+        <p>O título deve ser direto e informativo, incluindo um <strong>tipo</strong> e uma <strong>descrição
+                breve</strong> da mudança.</p>
+        <pre><code>🔧 Config | Criando Git-Actions padrões</code></pre>
+        <ul>
+            <li>✅ Use prefixos como <code>Feat |</code>, <code>Fix |</code>, <code>Refactor |</code>,
+                <code>Docs |</code>, <code>Config |</code>, etc.
+            </li>
+            <li>✅ Seja objetivo, mas claro.</li>
+            <li>🚫 Evite títulos genéricos como "Correção" ou "Ajustes".</li>
+        </ul>
+
+        <h3>📖 2. O que está sendo entregue?</h3>
+        <p>Descreva a mudança de forma resumida, explicando <strong>o que foi feito e o porquê</strong>.</p>
+        <pre><code>Foram adicionados padrões básicos de GitHub Actions para automação de deploy, garantindo segurança ao utilizar secrets.</code></pre>
+
+        <h3>⚙️ 3. Qual o impacto técnico?</h3>
+        <p>Explique como essa mudança afeta o sistema e se há impactos para outros times.</p>
+        <pre><code>Essa alteração faz com que, ao realizar um merge para a branch main, o código seja automaticamente enviado para o servidor e atualizado no repositório remoto.</code></pre>
+
+        <h3>🔄 4. Plano de rollback</h3>
+        <p>Se a alteração causar problemas, descreva como reverter.</p>
+        <pre><code>Para reverter, basta restaurar a versão anterior da branch main e desfazer o merge.</code></pre>
+
+        <h3>📸 5. Evidências (se aplicável)</h3>
+        <p>Inclua prints, logs ou links que comprovem que a funcionalidade foi testada e está funcionando corretamente.
+        </p>
+        <!-- Imagem do Blog com clique para ampliar -->
+        <img src="files/imgs/pull.png" alt="Imagem do Post" class="blog-image" onclick="openModal(this)">
+
+        <!-- Modal para exibir a imagem -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+
+        <h3>✅ 6. Checklist Obrigatório</h3>
+        <ul>
+            <li>[X] Código pronto</li>
+            <li>[X] Testado por DEV</li>
+            <li>[ ] Revisado por QA</li>
+            <li>[ ] Documentação atualizada</li>
+        </ul>
+    </div>
+
+    <div id="github-actions" class="content">
+        <h2>Automação com GitHub Actions ⚡</h2>
+
+        <h3>🚀 O que é?</h3>
+        <p>
+            O <strong>GitHub Actions</strong> permite automatizar tarefas dentro do repositório,
+            como rodar testes, fazer deploys e executar scripts personalizados.
+        </p>
+
+        <h3>🔄 Como Funciona?</h3>
+        <ul>
+            <li><strong>Eventos:</strong> O workflow é acionado por eventos como <code>push</code>,
+                <code>pull_request</code> e <code>schedule</code>.
+            </li>
+            <li><strong>Jobs:</strong> Um workflow pode ter vários jobs independentes rodando simultaneamente.</li>
+            <li><strong>Steps:</strong> Cada job contém passos que executam comandos ou ações pré-definidas.</li>
+        </ul>
+
+        <h3>📜 Exemplo de Workflow</h3>
+        <pre><code>
+    name: Run Tests
+    
+    on: [push, pull_request]
+    
+    jobs:
+      test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout código
+            uses: actions/checkout@v3
+    
+          - name: Configurar Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '16'
+    
+          - name: Instalar dependências
+            run: npm install
+    
+          - name: Rodar testes
+            run: npm test
+        </code></pre>
+
+        <h3>📂 Estrutura de Arquivos</h3>
+        <p>Os workflows ficam dentro da pasta <code>.github/workflows/</code> do repositório.</p>
+
+        <h3>✅ Benefícios</h3>
+        <ul>
+            <li>Automação de processos repetitivos</li>
+            <li>Melhoria na qualidade do código</li>
+            <li>Deploys mais rápidos e seguros</li>
+            <li>Execução em diferentes sistemas operacionais</li>
+        </ul>
+    </div>
+
+    <script src="files/scripts/index.js"></script>
+
+</body>
+
+</html>

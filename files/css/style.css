@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilização do banner */
+.banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilização das abas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.tab {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: white;
+    background: #333;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.tab:hover,
+.active {
+    background-color: #008000;
+}
+
+/* Seção de conteúdo */
+.content {
+    display: none;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.active-content {
+    display: block;
+}
+
+/* Estilização das tabelas */
+table {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #008000;
+    color: white;
+}
+
+/* Ajuste no banner principal */
+#banner {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilização das imagens do blog */
+.blog-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.05);
+}
+
+/* Modal - Fundo escuro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem dentro do Modal */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Botão de Fechar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff5555;
+}
