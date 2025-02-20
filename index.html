@@ -16,6 +16,7 @@
         <button class="tab active" onclick="openTab(event, 'commits')">Commits Padrão</button>
         <button class="tab" onclick="openTab(event, 'descricao')">Descrição de Pull Requests</button>
         <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
+        <button class="tab" onclick="openTab(event, 'link-repositorio')">Link do Repositório</button>
     </div>
 
     <div id="commits" class="content active-content">
@@ -320,6 +321,16 @@
             <li>Deploys mais rápidos e seguros</li>
             <li>Execução em diferentes sistemas operacionais</li>
         </ul>
+    </div>
+    
+    <div id="link-repositorio" class="content">
+        <h2>🔗 Link do Repositório</h2>
+        <p>Acesse o repositório no GitHub clicando no botão abaixo:</p>
+        <a href="https://github.com/JapaDiaz/Modelo" target="_blank">
+            <button class="btn-green">
+                🔗 Acessar Repositório
+            </button>
+        </a>
     </div>
 
     <script src="files/scripts/index.js"></script>
