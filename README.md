@@ -256,69 +256,69 @@ Revert a partir do branch.
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":books: | docs: Atualização do README"</code>
+        <code>git commit -m "docs: | Atualização do README"</code>
       </td>
-      <td>📚 docs: | Atualização do README</td>
+      <td> docs: | Atualização do README</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bug: fix: | Loop infinito na linha 50"</code>
+        <code>git commit -m "fix: | Loop infinito na linha 50"</code>
       </td>
-      <td>🐛 fix: | Loop infinito na linha 50</td>
+      <td> fix: | Loop infinito na linha 50</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":sparkles: feat: | Página de login"</code>
+        <code>git commit -m "feat: | Página de login"</code>
       </td>
-      <td>✨ feat: | Página de login</td>
+      <td> feat: | Página de login</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bricks: | ci: Modificação no Dockerfile"</code>
+        <code>git commit -m "ci: | Modificação no Dockerfile"</code>
       </td>
-      <td>🧱 ci: | Modificação no Dockerfile</td>
+      <td> ci: | Modificação no Dockerfile</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":recycle: refactor: | Passando para arrow functions"</code>
+        <code>git commit -m "refactor: | Passando para arrow functions"</code>
       </td>
-      <td>♻️ refactor: | Passando para arrow functions</td>
+      <td> refactor: | Passando para arrow functions</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":zap: perf: | Melhoria no tempo de resposta"</code>
+        <code>git commit -m "perf: | Melhoria no tempo de resposta"</code>
       </td>
-      <td>⚡ perf: | Melhoria no tempo de resposta</td>
+      <td> perf: | Melhoria no tempo de resposta</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":boom: fix: | Revertendo mudanças ineficientes"</code>
+        <code>git commit -m "fix: | Revertendo mudanças ineficientes"</code>
       </td>
-      <td>💥 fix: | Revertendo mudanças ineficientes</td>
+      <td> fix: | Revertendo mudanças ineficientes</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":lipstick: feat: | Estilização CSS do formulário"</code>
+        <code>git commit -m "style: | Estilização CSS do formulário"</code>
       </td>
-      <td>💄 feat: | Estilização CSS do formulário</td>
+      <td> style: | Estilização CSS do formulário</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":test_tube: test: | Criando novo teste"</code>
+        <code>git commit -m "test: | Criando novo teste"</code>
       </td>
-      <td>🧪 test: | Criando novo teste</td>
+      <td> test: | Criando novo teste</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bulb: docs: | Comentários sobre a função LoremIpsum( )"</code>
+        <code>git commit -m "docs: | Comentários sobre a função LoremIpsum( )"</code>
       </td>
-      <td>💡 docs: | Comentários sobre a função LoremIpsum( )</td>
+      <td> docs: | Comentários sobre a função LoremIpsum( )</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bulb: raw: | RAW Data do ano aaaa"</code>
+        <code>git commit -m "raw: | RAW Data do ano aaaa"</code>
       </td>
-      <td>🗃️ raw: | RAW Data do ano aaaa</td>
+      <td> raw: | RAW Data do ano aaaa</td>
     </tr>
   </tbody>
 </table>

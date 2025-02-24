@@ -50,6 +50,8 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .active-content {
@@ -120,30 +122,36 @@ th {
     align-items: center;
 }
 
-/* Imagem dentro do Modal */
+/* Estilo para a imagem no modal */
 .modal-content {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
 }
 
-/* Botão de Fechar */
+/* Efeito de zoom */
+.modal-content.zoom {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+
+/* Estilo para o botão de fechar */
 .close {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 20px;
     color: white;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #ff5555;
+    color: #bbb;
 }
 
+/* Botões */
 .btn-green {
     padding: 12px 20px;
     font-size: 16px;
@@ -158,4 +166,30 @@ th {
 
 .btn-green:hover {
     background-color: #218838;
+}
+
+.copy-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+#modelopr {
+    background-color: #dbd7d7;
 }
