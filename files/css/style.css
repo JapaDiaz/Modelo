@@ -6,7 +6,7 @@ body {
     color: #000;
 }
 
-/* Estilização do banner */
+
 .banner {
     text-align: center;
     padding: 20px;
@@ -18,7 +18,7 @@ body {
     height: auto;
 }
 
-/* Estilização das abas */
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ body {
     background-color: #008000;
 }
 
-/* Seção de conteúdo */
+
 .content {
     display: none;
     width: 90%;
@@ -58,7 +58,7 @@ body {
     display: block;
 }
 
-/* Estilização das tabelas */
+
 table {
     width: 80%;
     max-width: 800px;
@@ -78,7 +78,7 @@ th {
     color: white;
 }
 
-/* Ajuste no banner principal */
+
 #banner {
     width: 100%;
     max-height: 250px;
@@ -91,7 +91,7 @@ th {
     object-fit: cover;
 }
 
-/* Estilização das imagens do blog */
+
 .blog-image {
     width: 100%;
     max-width: 600px;
@@ -108,7 +108,6 @@ th {
     transform: scale(1.05);
 }
 
-/* Modal - Fundo escuro */
 .modal {
     display: none;
     position: fixed;
@@ -122,7 +121,7 @@ th {
     align-items: center;
 }
 
-/* Estilo para a imagem no modal */
+
 .modal-content {
     max-width: 90%;
     max-height: 90%;
@@ -130,13 +129,13 @@ th {
     cursor: zoom-in;
 }
 
-/* Efeito de zoom */
+
 .modal-content.zoom {
     transform: scale(1.5);
     cursor: zoom-out;
 }
 
-/* Estilo para o botão de fechar */
+
 .close {
     position: absolute;
     top: 20px;
@@ -151,7 +150,7 @@ th {
     color: #bbb;
 }
 
-/* Botões */
+
 .btn-green {
     padding: 12px 20px;
     font-size: 16px;
@@ -192,4 +191,105 @@ pre {
 
 #modelopr {
     background-color: #dbd7d7;
+}
+
+#openIconsButton {
+    background: #007bff;
+    /* Azul padrão */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#openIconsButton:hover {
+    background: #0056b3;
+    /* Azul mais escuro no hover */
+    transform: scale(1.05);
+}
+
+#openIconsButton:active {
+    background: #004494;
+    /* Azul ainda mais escuro no clique */
+    transform: scale(0.95);
+}
+
+
+/* Estilos do modal */
+.icons-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Remove rolagem */
+}
+
+/* Novo seletor para evitar conflito */
+.icons-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    max-height: 80%;
+    overflow-y: auto;
+    /* Permite rolagem apenas no conteúdo do modal */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    /* Bloqueia zoom */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Estilizando a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #41ab65;
+}
+
+td:nth-child(3) {
+    font-size: 1.5em;
+}
+
+.copy-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.copy-icon:hover {
+    transform: scale(1.2);
 }
