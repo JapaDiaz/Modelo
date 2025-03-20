@@ -17,6 +17,7 @@
         <button class="tab active" onclick="openTab(event, 'commits')">Commits Padrão</button>
         <button class="tab" onclick="openTab(event, 'descricao')">Descrição de Pull Requests</button>
         <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
+        <button class="tab" onclick="openTab(event, 'clickup')">Padrão ClickUp</button>
         <button class="tab" onclick="openTab(event, 'link-repositorio')">Link do Repositório</button>
     </div>
 
@@ -523,6 +524,49 @@ Reverter a partir do branch.
             <li>Execução em diferentes sistemas operacionais</li>
         </ul>
     </div>
+
+    <div id="clickup" class="content" style="display: none;">
+        <h2>Padrão ClickUp</h2>
+        <p>
+            O ClickUp é uma ferramenta de gestão de projetos que nos ajuda a organizar as tarefas da equipe de
+            desenvolvimento. Para manter um padrão, utilizaremos o seguinte formato para nomear as atividades:
+        </p>
+        <ul>
+            <li><strong>Nome do Projeto | Nome da Atividade | Front</strong></li>
+            <li>Exemplo: <code>Sistema X | Criar Tela de Login | Front</code></li>
+            <li>Se for backend: <code>Sistema X | Criar API de Autenticação | Back</code></li>
+        </ul>
+        <p>
+            Este padrão facilita a busca e organização das tarefas dentro da plataforma.
+        </p>
+
+        <h3>Estrutura de Projetos no ClickUp</h3>
+        <p>
+            Cada espaço no ClickUp representa um projeto. Dentro de um espaço, temos listas que correspondem a escopos
+            específicos do projeto e uma lista exclusiva para manutenção contínua.
+        </p>
+
+        <h4>Exemplo de Estrutura:</h4>
+        <ul>
+            <li><strong>Espaço:</strong> Duas Rodas</li>
+            <ul>
+                <li>Lista: Manutenção DuasRodas</li>
+                <li>Lista: Centenário DuasRodas</li>
+            </ul>
+        </ul>
+
+        <h3>Visualização no ClickUp</h3>
+        <p>
+            Abaixo estão exemplos de como os espaços e listas aparecem dentro do ClickUp:
+        </p>
+
+        <img src="imagem1.png" alt="Espaços no ClickUp" style="max-width: 100%; height: auto;">
+        <p>Imagem 1: Visão geral dos espaços, onde cada espaço representa um projeto.</p>
+
+        <img src="imagem2.png" alt="Listas dentro de um espaço no ClickUp" style="max-width: 100%; height: auto;">
+        <p>Imagem 2: Estrutura interna de um espaço, com listas de escopos e manutenção.</p>
+    </div>
+
 
     <div id="link-repositorio" class="content">
         <h2>🔗 Link do Repositório</h2>
