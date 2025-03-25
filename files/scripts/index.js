@@ -12,16 +12,21 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-
 function openModal(img) {
     let modal = document.getElementById("imageModal");
     let modalImg = document.getElementById("modalImg");
 
+    if (!modal || !modalImg) {
+        console.error("Modal ou imagem modal não encontrados.");
+        return;
+    }
+
     modal.style.display = "flex";
     modalImg.src = img.src;
 
+    // Removendo zoom ao abrir
     modalImg.classList.remove('zoom');
-    modalImg.style.cursor = "zoom-in"; // Define cursor inicial
+    modalImg.style.cursor = "zoom-in";
 
     modalImg.onclick = function () {
         if (modalImg.classList.contains('zoom')) {
@@ -33,13 +38,11 @@ function openModal(img) {
         }
     };
 
-
     modal.onclick = function (event) {
         if (event.target === modal) {
             closeModal();
         }
     };
-
 
     document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
@@ -49,8 +52,12 @@ function openModal(img) {
 }
 
 function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
+    let modal = document.getElementById("imageModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
+
 
 
 document.getElementById("copyButton").addEventListener("click", function () {
