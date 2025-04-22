@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxo de Pull Request e GitHub Actions</title> 
+    <title>Fluxo de Pull Request e GitHub Actions</title>
     <link rel="stylesheet" href="files/css/style.css">
     <link rel="shortcut icon" type="imagex/png" href="./files/imgs/favicon.ico">
 </head>
@@ -14,14 +14,109 @@
         <img src="files/imgs/postali.jpg" alt="Banner do Blog">
     </div>
     <div class="tabs">
-        <button class="tab active" onclick="openTab(event, 'commits')">Commits Padrão</button>
+        <button class="tab active" onclick="openTab(event, 'manual')">Manual Dev</button>
+        <button class="tab" onclick="openTab(event, 'commits')">Commits Padrão</button>
         <button class="tab" onclick="openTab(event, 'descricao')">Descrição de Pull Requests</button>
         <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
         <button class="tab" onclick="openTab(event, 'clickup')">Padrão ClickUp</button>
         <button class="tab" onclick="openTab(event, 'link-repositorio')">Link do Repositório</button>
     </div>
 
-    <div id="commits" class="content active-content">
+    <div id="manual" class="content active-content">
+        <h2>Manual de Boas Práticas de Desenvolvimento – POSTALI</h2>
+        <p><strong>Bem-vindo ao nosso manual!</strong></p>
+        <p>Este documento reúne os princípios, diretrizes e práticas que adotamos no time de desenvolvimento da POSTALI.
+            Ele serve como uma bússola para mantermos a qualidade, a organização e o bom funcionamento de nossos
+            projetos. Aqui você vai encontrar orientações claras sobre como agir no dia a dia, garantindo entregas
+            confiáveis e alinhadas com os valores da empresa.</p>
+        <blockquote><strong>Importante:</strong> Este manual deve ser seguido por todos os desenvolvedores. Ele não
+            existe para burocratizar, mas sim para tornar nosso trabalho mais fluido, previsível e seguro para todos os
+            envolvidos.</blockquote>
+
+        <hr>
+
+        <h3>🔁 1. Revisão Final e Encerramento de Atividades</h3>
+        <p><strong>Todos os dias, nos últimos 15 minutos do expediente,</strong> cada desenvolvedor deve:</p>
+        <ul>
+            <li>Parar de desenvolver novas funcionalidades;</li>
+            <li>Revisar o que foi feito no dia (código, commits, alterações de configuração);</li>
+            <li>Validar se tudo está funcionando corretamente (testes, build, navegação manual);</li>
+            <li>Remover qualquer código temporário (ex: <code>console.log</code>, <code>dd()</code>,
+                <code>dump()</code>);</li>
+            <li>Atualizar a tarefa correspondente no ClickUp com status e observações.</li>
+        </ul>
+        <p><strong>Durante esse período, não é recomendado:</strong></p>
+        <ul>
+            <li>Fazer pushes ou merges;</li>
+            <li>Subir arquivos via FTP/SSH;</li>
+            <li>Realizar deploys em qualquer ambiente.</li>
+        </ul>
+        <p>Essa pausa ajuda a evitar bugs de última hora, previne falhas em produção e valoriza a qualidade da entrega.
+        </p>
+
+        <hr>
+
+        <h3>🚫 2. Deploys às Sextas-feiras</h3>
+        <p>Deploys às sextas só serão permitidos em <strong>casos de real necessidade</strong>, e <strong>com
+                autorização da gestão de TI</strong>.</p>
+        <p>A intenção é evitar problemas que possam surgir no fim de semana, quando a equipe pode estar indisponível
+            para resolver.</p>
+
+        <hr>
+
+        <h3>⏳ 3. Acompanhamento de Prazos</h3>
+        <p>Se você perceber que <strong>uma entrega pode atrasar</strong>, comunique a gestão <strong>o quanto antes
+                possível</strong>.</p>
+        <p>Isso permite que a empresa alinhe expectativas com o cliente e renegocie prazos de forma responsável, sem
+            prejudicar a equipe nem o projeto.</p>
+
+        <hr>
+
+        <h3>🌐 4. Padrões de Deploy, Commits e Pull Requests</h3>
+        <p>Temos um site oficial com os padrões que seguimos na POSTALI:</p>
+        <p>🔗 <a href="https://japadiaz.github.io/Modelo/" target="_blank">VOCÊ ESTÁ NELE</a></p>
+        <p>Lá você encontra exemplos e boas práticas sobre:</p>
+        <ul>
+            <li>Commits claros e objetivos;</li>
+            <li>Como criar e revisar Pull Requests;</li>
+            <li>Estrutura de branches e fluxo Git;</li>
+            <li>Padrões para deploy automatizado.</li>
+        </ul>
+        <p>Esse material é referência obrigatória. Consulte sempre que tiver dúvida ou quiser revisar o processo.</p>
+
+        <hr>
+
+        <h3>💬 5. Comunicação</h3>
+        <p>Transparência e clareza são fundamentais. Sempre que surgir um imprevisto, um bloqueio ou uma dúvida:</p>
+        <ul>
+            <li>Comunique seu líder técnico ou gestor;</li>
+            <li>Documente no ClickUp ou no canal apropriado;</li>
+            <li>Não tenha medo de pedir ajuda ou propor melhorias.</li>
+        </ul>
+
+        <hr>
+
+        <h3>✅ 6. Cultura de Qualidade</h3>
+        <p>Acreditamos que <strong>a qualidade não é um extra, é parte do processo</strong>. Por isso, este manual é um
+            reflexo da nossa cultura:</p>
+        <ul>
+            <li>Entregamos com responsabilidade;</li>
+            <li>Respeitamos os processos estabelecidos;</li>
+            <li>Mantemos o código limpo, legível e funcional;</li>
+            <li>Pensamos no próximo desenvolvedor que vai dar manutenção.</li>
+        </ul>
+
+        <hr>
+
+        <h3>📌 Conclusão</h3>
+        <p>Este manual é vivo: pode e deve ser melhorado com o tempo. Se você tiver sugestões, converse com o gestor de
+            TI.</p>
+        <p>Vamos juntos construir um ambiente saudável, produtivo e com entregas de alto nível.</p>
+        <p><strong>Gestão de TI – POSTALI</strong></p>
+    </div>
+
+
+    <div id="commits" class="content">
         <h2>Commits Padrão</h2>
         <p>Utilize este padrão de commits para manter um histórico organizado e fácil de entender.</p>
 
@@ -522,7 +617,7 @@ Reverter a partir do branch.
         </ul>
     </div>
 
-    <div id="clickup" class="content" style="display: none;">
+    <div id="clickup" class="content">
         <h2>Padrão ClickUp</h2>
         <p>
             O ClickUp é uma ferramenta de gestão de projetos que auxilia na organização das tarefas da equipe de
@@ -571,8 +666,6 @@ Reverter a partir do branch.
 
     </div>
 
-
-
     <div id="link-repositorio" class="content">
         <h2>🔗 Link do Repositório</h2>
         <p>Acesse o repositório no GitHub clicando no botão abaixo:</p>
@@ -584,7 +677,7 @@ Reverter a partir do branch.
     </div>
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg"> 
+        <img class="modal-content" id="modalImg">
     </div>
 
     <script src="files/scripts/index.js"></script>
