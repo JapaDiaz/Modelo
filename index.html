@@ -19,6 +19,7 @@
         <button class="tab" onclick="openTab(event, 'descricao')">Descrição de Pull Requests</button>
         <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
         <button class="tab" onclick="openTab(event, 'clickup')">Padrão ClickUp</button>
+        <button class="tab" onclick="openTab(event, 'ambientes')">Lógica de ambientes</button>
         <button class="tab" onclick="openTab(event, 'link-repositorio')">Link do Repositório</button>
     </div>
 
@@ -42,7 +43,8 @@
             <li>Revisar o que foi feito no dia (código, commits, alterações de configuração);</li>
             <li>Validar se tudo está funcionando corretamente (testes, build, navegação manual);</li>
             <li>Remover qualquer código temporário (ex: <code>console.log</code>, <code>dd()</code>,
-                <code>dump()</code>);</li>
+                <code>dump()</code>);
+            </li>
             <li>Atualizar a tarefa correspondente no ClickUp com status e observações.</li>
         </ul>
         <p><strong>Durante esse período, não é recomendado:</strong></p>
@@ -665,6 +667,52 @@ Reverter a partir do branch.
             onclick="openModal(this)">
 
     </div>
+
+    <div id="ambientes" class="content">
+        <h3>🌍 Padronização de Ambientes (Dev e Produção)</h3>
+
+        <p>Com a adoção do GitHub Actions, estamos implementando uma <strong>padronização oficial dos ambientes de
+                deploy</strong> para garantir estabilidade, organização e previsibilidade nas nossas entregas.</p>
+
+        <h4>🔁 Branches e Ambientes</h4>
+        <ul>
+            <li><strong><code>main</code> ou <code>master</code> → Produção</strong><br>
+                Toda alteração na branch <code>main</code> ou <code>master</code> será automaticamente deployada no
+                ambiente de <strong>produção</strong>, que corresponde ao domínio oficial do projeto (ex:
+                <code>www.nomedosite.com.br</code>).</li>
+
+            <li><strong><code>dev</code> → Ambiente de Homologação/Testes</strong><br>
+                A branch <code>dev</code> será usada para deploy automático no ambiente de <strong>desenvolvimento e
+                    testes</strong>, que terá o padrão de subdomínio:<br>
+                <code>dev.nomedosite.com.br</code>
+            </li>
+        </ul>
+
+        <p>Este ambiente é destinado a:</p>
+        <ul>
+            <li>Testes funcionais e de integração;</li>
+            <li>Validação de demandas antes do envio para produção;</li>
+            <li>Aprovação de features pelo cliente e pela equipe interna.</li>
+        </ul>
+
+        <h4>📌 Regras Gerais</h4>
+        <ul>
+            <li>Todo código deve passar pela branch <code>dev</code> antes de ir para <code>main</code>;</li>
+            <li>Não é permitido fazer merge direto na <code>main</code> sem revisão;</li>
+            <li>O ambiente <code>dev</code> deve ser tratado com a mesma atenção que a produção;</li>
+            <li>Se houver múltiplos projetos no mesmo servidor, cada um seguirá a mesma lógica (ex:
+                <code>dev.projetox.com.br</code>, <code>dev.projetoy.com.br</code>).</li>
+        </ul>
+
+        <h4>🛠️ Benefícios da Padronização</h4>
+        <ul>
+            <li>Deploys mais seguros e automatizados;</li>
+            <li>Redução de erros e retrabalho;</li>
+            <li>Ambientes com papéis bem definidos;</li>
+            <li>Melhor comunicação entre devs, gestão e cliente.</li>
+        </ul>
+    </div>
+
 
     <div id="link-repositorio" class="content">
         <h2>🔗 Link do Repositório</h2>
