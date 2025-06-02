@@ -481,9 +481,6 @@
                 </table>
             </div>
         </div>
-
-
-
         <h3>📌 1. Título</h3>
         <p>O título deve ser direto e informativo, incluindo um <strong>tipo</strong> e uma <strong>descrição
                 breve</strong> da mudança.</p>
@@ -493,16 +490,16 @@
                 <code>Docs |</code>, <code>Config |</code>, etc.
             </li>
             <li>✅ Seja objetivo, mas claro.</li>
-            <li>🚫 Evite títulos genéricos como "Correção" ou "Ajustes".</li>
+            <li>❌ Evite títulos genéricos como "Correção" ou "Ajustes".</li>
         </ul>
-
+    
         <h3>📋 2. Copie o Modelo Padrão</h3>
         <p>Clique no botão abaixo para copiar o template de PR e cole no GitHub.</p>
         <div id="modelopr">
             <button id="copyButton" class="copy-btn">Copiar Template</button>
-
+    
             <pre><code id="prTemplate">
-[Link da task](Figma)
+[Link da Task no ClickUp](ClickUp)
 
 #### O que está sendo entregue?
 Foi realizada uma modificação na estrutura do projeto e retirado vários arquivos e pastas desnecessárias. Também foi refeito o login do sistema.
@@ -516,34 +513,39 @@ Reverter a partir do branch.
 #### Evidências
 "NÃO APLICÁVEL"
 
+#### Como testar
+1 - Acessar a branch feat/my-implementation  
+2 - Atualizar as tabelas `php console Atualizar:tabelas`  
+3 - Dar a permissão X para o seu usuário  
+4 - Realizar os Testes  
+5 - Dica: Teste o login com um usuário normal e um administrador e veja se todas as permissões estão certas.
+
 ### Obrigatório
 - [X] Código pronto
-- [ ] Testado por DEV
-- [ ] Revisado por QA
 - [ ] Documentação atualizada
-        </code></pre>
+- [ ] Testado por DEV
+            </code></pre>
         </div>
-
+    
         <h3>📖 3. O que está sendo entregue?</h3>
         <p>Descreva a mudança de forma resumida, explicando <strong>o que foi feito e o porquê</strong>.</p>
         <pre><code>Foram adicionados padrões básicos de GitHub Actions para automação de deploy, garantindo segurança ao utilizar secrets.</code></pre>
-
+    
         <h3>⚙️ 4. Qual o impacto técnico?</h3>
         <p>Explique como essa mudança afeta o sistema e se há impactos para outros times.</p>
         <pre><code>'Essa alteração faz com que, ao realizar um merge para a branch main, o código seja automaticamente enviado para o servidor e atualizado no repositório remoto.'</code></pre>
-
+    
         <h4>🔹 Alternativo 1: Front-end - Alteração no Layout</h4>
         <p>Foi implementado um novo sistema de temas no painel do usuário. Com isso, alguns estilos antigos foram
             removidos, exigindo ajustes no CSS para evitar que elementos fiquem desalinhados ou com cores incorretas em
             telas menores.</p>
-
+    
         <h4>🔹 Alternativo 2: Back-end - Refatoração de API</h4>
         <p>O endpoint <code>/users/profile</code> agora retorna os dados do usuário em um novo formato, incluindo o
             campo <code>full_name</code> em vez de <code>first_name</code> e <code>last_name</code>. Essa alteração
             exige uma atualização no front-end para evitar falhas na exibição dos perfis.</p>
-
-
-        <h3>🔄 5. Plano de rollback</h3>
+    
+        <h3>🗐️ 5. Plano de rollback</h3>
         <p>Se a alteração causar problemas, descreva como reverter.</p>
         <pre><code>Para reverter, basta restaurar a versão anterior da branch main e desfazer o merge.</code></pre>
         <img src="files/imgs/revert.png" alt="Imagem do Post" class="blog-image" onclick="openModal(this)">
@@ -553,14 +555,21 @@ Reverter a partir do branch.
         <p>Inclua prints, logs ou links que comprovem que a funcionalidade foi testada e está funcionando corretamente.
         </p>
         <img src="files/imgs/pull.png" alt="Imagem do Post" class="blog-image" onclick="openModal(this)">
+    
+        <h3>⚙️ 8. Como testar</h3>
+        <ul>
+            <p>Acessar a branch feat/my-implementation  </p>
+            <p>Atualizar as tabelas `php console Atualizar:tabelas`</p>
+            <p>Dar a permissão X para o seu usuário </p> 
+            <p>Realizar os Testes  </p>
+            <p>Dica: Teste o login com um usuário normal e um administrador e veja se todas as permissões estão certas. </p>
+        </ul>
 
-
-
-        <h3>✅ 7. Checklist Obrigatório</h3>
+        <h3>✅ 9. Checklist Obrigatório</h3>
         <ul>
             <li>[X] Código pronto</li>
-            <li>[X] Testado por DEV</li>
-            <li>[ ] Revisado por QA</li>
+            <li>[ ] Documentação atualizada</li>
+            <li>[ ] Testado por DEV</li>
         </ul>
     </div>
 
