@@ -20,6 +20,7 @@
         <button class="tab" onclick="openTab(event, 'github-actions')">GitHub Actions</button>
         <button class="tab" onclick="openTab(event, 'clickup')">Padrão ClickUp</button>
         <button class="tab" onclick="openTab(event, 'ambientes')">Lógica de ambientes</button>
+        <button class="tab" onclick="openTab(event, 'dominios')">Lógica de domínios</button>
         <button class="tab" onclick="openTab(event, 'link-repositorio')">Link do Repositório</button>
     </div>
 
@@ -721,6 +722,49 @@ Reverter a partir do branch.
             <li>Melhor comunicação entre devs, gestão e cliente.</li>
         </ul>
     </div>
+
+    <div id="dominios" class="content">
+        <h2>📦 Modelo Padrão de Estrutura de Domínios – Projetos POSTALI</h2>
+    
+        <p>Este é o modelo oficial para estruturação de domínios em projetos com site público, CMS (Painel Administrativo) e API back-end. Deve ser seguido por toda a equipe de desenvolvimento para manter padronização, clareza e facilidade de manutenção.</p>
+    
+        <h3>🌐 Site Público (Front Principal)</h3>
+        <ul>
+            <li><strong>Produção:</strong> <code>nomedosite.com.br</code></li>
+            <li><strong>Desenvolvimento:</strong> <code>dev.nomedosite.com.br</code></li>
+        </ul>
+    
+        <h3>🛠️ CMS / Painel Administrativo (Vue)</h3>
+        <ul>
+            <li><strong>Produção:</strong> <code>admin.nomedosite.com.br</code></li>
+            <li><strong>Desenvolvimento:</strong> <code>admin.dev.nomedosite.com.br</code></li>
+        </ul>
+    
+        <h3>⚙️ API (Laravel)</h3>
+        <ul>
+            <li><strong>Produção:</strong> <code>api.nomedosite.com.br</code></li>
+            <li><strong>Desenvolvimento:</strong> <code>api.dev.nomedosite.com.br</code></li>
+        </ul>
+    
+        <h3>📌 Considerações Técnicas</h3>
+        <ul>
+            <li>Todos os subdomínios devem possuir SSL (HTTPS).</li>
+            <li>As aplicações front-end devem consumir suas respectivas APIs conforme o ambiente (produção ou desenvolvimento).</li>
+            <li>As variáveis de ambiente devem refletir os domínios corretos para garantir CORS e comunicação adequada.</li>
+            <li>Separação clara entre front-end, painel administrativo e API favorece escalabilidade, segurança e manutenção.</li>
+        </ul>
+    
+        <h3>✅ Exemplo prático: Projeto "uaisalgados"</h3>
+        <ul>
+            <li><strong>Site (prod):</strong> <code>uaisalgados.com.br</code></li>
+            <li><strong>Site (dev):</strong> <code>dev.uaisalgados.com.br</code></li>
+            <li><strong>Admin CMS (prod):</strong> <code>admin.uaisalgados.com.br</code></li>
+            <li><strong>Admin CMS (dev):</strong> <code>admin.dev.uaisalgados.com.br</code></li>
+            <li><strong>API (prod):</strong> <code>api.uaisalgados.com.br</code></li>
+            <li><strong>API (dev):</strong> <code>api.dev.uaisalgados.com.br</code></li>
+        </ul>
+    </div>
+    
 
 
     <div id="link-repositorio" class="content">
